@@ -333,6 +333,9 @@ ClientProxy1_0::mouseUp(ButtonID button)
 void
 ClientProxy1_0::mouseMove(SInt32 xAbs, SInt32 yAbs)
 {
+    const auto scale = 1.75f;
+    xAbs = (float) xAbs * scale;
+    yAbs = (float) yAbs * scale;
     LOG((CLOG_DEBUG2 "send mouse move to \"%s\" %d,%d", getName().c_str(), xAbs, yAbs));
     ProtocolUtil::writef(getStream(), kMsgDMouseMove, xAbs, yAbs);
 }

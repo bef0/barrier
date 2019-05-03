@@ -1,3 +1,6 @@
+/.idea
+/cmake-build-debug
+
 build_env.*
 config.h
 .DS_Store
